@@ -4,8 +4,8 @@
 with standard syntax.
 """
 from enum import Enum
-from genbuild.genbuild.makefile_generator import MakefileWriter
-from genbuild.genbuild.ninja_generator import NinjaWriter
+from buildgen.buildgen.makefile_generator import MakefileWriter
+from buildgen.buildgen.ninja_generator import NinjaWriter
 
 
 class BuildSystem(Enum):
