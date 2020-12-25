@@ -4,8 +4,8 @@
 with standard syntax.
 """
 from enum import Enum
-from buildgen.buildgen.makefile_generator import MakefileWriter
-from buildgen.buildgen.ninja_generator import NinjaWriter
+from DragonGen.buildgen.buildgen.makefile_generator import MakefileWriter
+from DragonGen.buildgen.buildgen.ninja_generator import NinjaWriter
 
 
 class BuildSystem(Enum):
@@ -13,7 +13,7 @@ class BuildSystem(Enum):
     MAKE = 1
 
 
-class Generator(object):
+class BuildFileGenerator(object):
     def __init__(self, output, build_type=BuildSystem.NINJA):
         self.builder = NinjaWriter(output) if build_type == BuildSystem.NINJA else MakefileWriter(output)
 
